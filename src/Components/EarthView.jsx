@@ -2,7 +2,6 @@ import React, { useRef, useEffect } from "react";
 import { Canvas, useLoader, useFrame } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
 import * as THREE from "three";
-
 import Planet from "./Planet";
 import earthTexture from "../textures/earth.jpg";
 import moonTexture from "../textures/moon.jpg";

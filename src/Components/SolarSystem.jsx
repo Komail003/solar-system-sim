@@ -18,6 +18,7 @@ import uranusTexture from "../textures/uranus.jpg";
 import neptuneTexture from "../textures/neptune.jpg";
 import plutoTexture from "../textures/pluto.jpg";
 import starsTexture from "../textures/stars.jpg";
+import AsteroidBelt from "./AsteroidBelt";
 import { useLoader } from "@react-three/fiber";
 import * as THREE from "three";
 
@@ -111,35 +112,35 @@ export default function SolarSystem() {
     {
       name: "Jupiter",
       size: 11.21,
-      distance: 85,
+      distance: 120,
       speed: 0.5,
       texture: jupiterTexture,
     },
     {
       name: "Saturn",
       size: 9.45,
-      distance: 120,
+      distance: 145,
       speed: 0.4,
       texture: saturnTexture,
     },
     {
       name: "Uranus",
       size: 4.01,
-      distance: 145,
+      distance: 170,
       speed: 0.3,
       texture: uranusTexture,
     },
     {
       name: "Neptune",
       size: 3.88,
-      distance: 165,
+      distance: 190,
       speed: 0.2,
       texture: neptuneTexture,
     },
     {
       name: "Pluto",
       size: 0.8,
-      distance: 195,
+      distance: 225,
       speed: 0.105,
       texture: plutoTexture,
     },
@@ -221,6 +222,10 @@ export default function SolarSystem() {
               distance={p.distance}
               speed={p.speed}
             />
+            {/* Add asteroid belt after Mars */}
+            {p.name === "Mars" && (
+              <AsteroidBelt innerRadius={75} outerRadius={100} count={1500} />
+            )}
           </React.Fragment>
         ))}
 
