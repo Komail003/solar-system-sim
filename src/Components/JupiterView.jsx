@@ -3,7 +3,7 @@ import { Canvas, useLoader, useFrame } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
 import * as THREE from "three";
 import { EffectComposer, Bloom } from "@react-three/postprocessing";
-
+import { useNavigate } from "react-router-dom";
 import Planet from "./Planet";
 import jupiterTexture from "../textures/jupiter.jpg";
 import starsTexture from "../textures/stars.jpg";
@@ -93,9 +93,30 @@ export default function JupiterView() {
       controlsRef.current.update();
     }
   }, []);
-
+  let navigate = useNavigate();
   return (
     <div style={{ width: "100vw", height: "100vh", background: "black" }}>
+      <div
+        style={{
+          position: "fixed",
+          top: 20,
+          right: 20,
+          background: "rgba(0,0,0,0.6)",
+          padding: "10px 20px",
+          borderRadius: "10px",
+          color: "white",
+          fontFamily: "sans-serif",
+          zIndex: 10,
+        }}
+      >
+        <h3>🟠 Jupiter View</h3>
+        <div
+          style={{ cursor: "pointer", color: "#ff4c4c", marginTop: "5px" }}
+          onClick={() => navigate("/")}
+        >
+          ⬅ Back to Menu
+        </div>
+      </div>
       <Canvas shadows camera={{ position: initialCamPos, fov: 60 }}>
         <ambientLight intensity={0.15} />
         <StarBackground />

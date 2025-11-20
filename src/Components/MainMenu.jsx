@@ -92,6 +92,23 @@ export default function MainMenu() {
         >
           🪐 Jupiter
         </button>
+        <button
+          onClick={() => navigate("/venus")}
+          style={{
+            background: "#FFD700",
+            color: "#000",
+            padding: "12px 24px",
+            borderRadius: "8px",
+            marginTop: "1rem",
+            border: "none",
+            cursor: "pointer",
+            fontWeight: "bold",
+            fontSize: "1.1rem",
+            boxShadow: "0 0 15px rgba(255,215,0,0.4)",
+          }}
+        >
+          🟠 Venus
+        </button>
       </div>
     </div>
   );

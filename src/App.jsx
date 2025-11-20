@@ -5,7 +5,7 @@ import SolarSystem from "./Components/SolarSystem";
 import EarthView from "./Components/EarthView";
 import SaturnView from "./Components/SaturnView";
 import JupiterView from "./Components/JupiterView";
-import Cameras from "./Components/ExampleScene";
+import VenusView from "./Components/VenusView";
 export default function App() {
   return (
     <Routes>
@@ -14,6 +14,8 @@ export default function App() {
       <Route path="/earth" element={<EarthView />} />
       <Route path="/saturn" element={<SaturnView />} />
       <Route path="/jupiter" element={<JupiterView />} />
+      <Route path="/venus" element={<VenusView />} />
+
       <Route path="*" element={<MainMenu />} />
     </Routes>
   );
