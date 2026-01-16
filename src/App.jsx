@@ -6,6 +6,8 @@ import EarthView from "./Components/EarthView";
 import SaturnView from "./Components/SaturnView";
 import JupiterView from "./Components/JupiterView";
 import VenusView from "./Components/VenusView";
+import MercuryView from "./Components/MercuryView";
+import MarsView from "./Components/MarsView";
 export default function App() {
   return (
     <Routes>
@@ -15,6 +17,8 @@ export default function App() {
       <Route path="/saturn" element={<SaturnView />} />
       <Route path="/jupiter" element={<JupiterView />} />
       <Route path="/venus" element={<VenusView />} />
+      <Route path="/mercury" element={<MercuryView />} />
+      <Route path="/mars" element={<MarsView />} />
 
       <Route path="*" element={<MainMenu />} />
     </Routes>

@@ -109,6 +109,40 @@ export default function MainMenu() {
         >
           🟠 Venus
         </button>
+        <button
+          onClick={() => navigate("/mercury")}
+          style={{
+            background: "#FFD700",
+            color: "#000",
+            padding: "12px 24px",
+            borderRadius: "8px",
+            marginTop: "1rem",
+            border: "none",
+            cursor: "pointer",
+            fontWeight: "bold",
+            fontSize: "1.1rem",
+            boxShadow: "0 0 15px rgba(255,215,0,0.4)",
+          }}
+        >
+          🟠 Mercury
+        </button>
+        <button
+          onClick={() => navigate("/mars")}
+          style={{
+            background: "#FFD700",
+            color: "#000",
+            padding: "12px 24px",
+            borderRadius: "8px",
+            marginTop: "1rem",
+            border: "none",
+            cursor: "pointer",
+            fontWeight: "bold",
+            fontSize: "1.1rem",
+            boxShadow: "0 0 15px rgba(255,215,0,0.4)",
+          }}
+        >
+          🟠 Mars
+        </button>
       </div>
     </div>
   );
